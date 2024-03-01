@@ -1,13 +1,70 @@
 @font-face {
     font-family: 'Fuente1';
-    src: url('fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf')
+    src: url('fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf') format('truetype');
 }
 
-h1{
-    font-family: 'Fuente1', Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    text-align: calc(100px);
+@font-face {
+    font-family: 'Fuente2';
+    src: url('fonts/Madimi_One/MadimiOne-Regular.ttf') format('truetype');
 }
+
+@keyframes slideInPage2 {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.imagen-centro img {
+    animation: slideInPage2 1.5s ease-in-out;
+}
+
+
+h1 {
+    font-family: 'Fuente1', Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    text-align: center; 
+}
+
+p {
+    font-family: 'Fuente2', Arial, Helvetica, sans-serif;
+    font-size: 30px;    
+    text-align: left; 
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    height: 300px; 
+}
+
+.contenedor {
+    display: flex;
+}
+
+.texto-izquierdo,
+.texto-derecho {
+    flex: 1;
+    text-align: center; 
+    margin: 0 20px;
+}
+
+.imagen-centro {
+    margin: 0 20px; 
+}
+
+img {
+    max-width: 100%; 
+    max-height: 100%; 
+    width: 500px; 
+    height: 400px; 
+}
+
 
 footer {
     display: flex;
@@ -24,4 +81,34 @@ footer {
 .retroceder i {
     font-size: 40px; 
     margin: 0 10px; 
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 16px; 
+    }
+
+    .imagen-centro img {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+        margin: 40px; 
+    }
+
+    .imagen-centro img {
+        border: 2px solid #ccc; 
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        font-size: 50px; 
+    }
+
+    .imagen-centro img {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    }
 }
